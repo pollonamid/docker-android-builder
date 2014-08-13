@@ -1,62 +1,60 @@
-docker-cyanogenmod
+docker-android-builder
 ==================
 
-Create a [Docker] based environment to build [CyanogenMod].
+Create a [Docker] based environment for [Android Open Source Project] (AOSP) based building
 
-This Dockerfile will create a docker container which is based on Ubuntu 14.04.
-It will install the "repo" utility and any other build dependencies which are required to compile CyanogenMod.
+This Dockerfile will create a docker container which is based on Trusted Docker Ubuntu 14.04 build.
+It will install the "repo" utility and any other build dependencies which are required to compile your flavor of Android.
 
-The main working directory is a shared folder on the host system, so the Docker container can be removed at any time.
+**NOTE:** Remember that Android is a huge project. It will consume a large amount of disk space (~80 GB) and it can easily take hours to build.
 
-**NOTE:** Remember that CyanogenMod is a huge project. It will consume a large amount of disk space (~80 GB) and it can easily take hours to build.
+---
 
-### How to run/build
+### How to run/build 
 
-**NOTES:**
 * You will need to [install Docker][Docker_Installation] to proceed!
 * If an image does not exist, ```docker build``` is executed first
-* When running ```docker build```, the whole folder incl. the "android" working directory is transferred to the Docker daemon. The only way to work around this currently is to move the "android" folder away, then rebuild, and move it back into place again.
-For more information, see [dotcloud/docker#2224].
 
+1. Clone the repo
 ```
-git clone https://github.com/stucki/docker-cyanogenmod.git
-cd docker-cyanogenmod
+git clone https://github.com/thrilleratplay/docker-android-builder.git
+cd docker-android-builder
+```
+
+2. Update the build variables located in "config/android-build-vars.sh"
+  * **Optional** Update "config/build-android.sh" with the commands needed to build Android.  The steps for building Android vary between devices and distributions.  **If you are new to this, you probably want to run the commands manually before using the automated build file**
+
+3. Start up Docker
+```
 ./run.sh
 ```
 
-The container uses "screen" to run the shell. This means that you will be able to open additional shells using [screen keyboard shortcuts][Screen_Shortcuts].
+**ADDITIONAL NOTES:**  
+* The container uses a text-based window manager and terminal multiplexer called [Byobu] to run the shell.
 
-### How to build CyanogenMod for your device
-
+* Once in the container, begin the build process your desired Android distribution.  ONLY If you have updated the build-android script, simply run:
 ```
-repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0
-repo sync
-vendor/cm/get-prebuilts
-source build/envsetup.sh
-breakfast <device codename>   # example: breakfast grouper
-brunch <device codename>      # example: brunch grouper
+build-android
 ```
+---
 
-### Links
+### Tested Android builds  
+Distribution | Requires Oracle Java
+- |:-:|
+[CarbonRom] | Yes
 
-For further information, check the following links:
-
-* [CyanogenMod Building Basics][Cyanogenmod_Building_Basics]
-* [Learning to Build CyanogenMod][Learning_to_Build_CM]
-* [Build Instructions for Google Nexus 5][CyanogenMod_Build_Nexus5] (example device, search the wiki for other devices)
+---
 
 ### More information
 
-* [Discussion thread @ XDA developers]
+* [Discussion thread @ XDA developers] - Started for [docker-cyanogenmod]
 
-==================
+---
 
 [Docker]:                      https://www.docker.io/
-[CyanogenMod]:                 http://www.cyanogenmod.org/
+[Android Open Source Project]: https://source.android.com/index.html
 [Docker_Installation]:         https://www.docker.io/gettingstarted/
-[Screen_Shortcuts]:            http://www.pixelbeat.org/lkdb/screen.html
-[CyanogenMod_Building_Basics]: http://wiki.cyanogenmod.org/w/Doc:_Building_Basics
-[Learning_to_Build_CM]:        http://wiki.cyanogenmod.org/w/Development#Learning_To_Build_CM
-[CyanogenMod_Build_Nexus5]:    http://wiki.cyanogenmod.org/w/Build_for_hammerhead
-[Discussion thread @ XDA developers]: http://forum.xda-developers.com/showthread.php?t=2650345
-[dotcloud/docker#2224]:        https://github.com/dotcloud/docker/issues/2224
+[Byobu]:            		   http://byobu.co/
+[CarbonRom]: 				   https://carbonrom.org/
+[Discussion thread @ XDA developers]: http://forum.xda-developers.com/showthread.php?t=2650345  
+[docker-cyanogenmod]:		   https://github.com/stucki/docker-cyanogenmod
