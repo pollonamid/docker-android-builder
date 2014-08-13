@@ -40,9 +40,9 @@ build-android
 
 ### Tested Android builds  
 
-| Distribution | Requires Oracle Java |   
-| - | :-: |   
-| [CarbonRom](https://carbonrom.org ) | Yes |   
+| Distribution | Requires Oracle Java |
+| - |:-:|   
+| [CarbonRom](https://carbonrom.org) | Yes |  
 
 ---
 
