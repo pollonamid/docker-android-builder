@@ -39,11 +39,16 @@ build-android
 ---
 
 ### Tested Android builds  
-
-| Distribution | Requires Oracle Java |  
-| - |:-:|   
-| [CarbonRom](https://carbonrom.org) | Yes |  
-
+<table>
+  <tr>
+   <th>Distribution</th>
+   <th>Requires Oracle Java</th>
+ </tr>
+ <tr>
+   <td><a href="https://carbonrom.org" target="_blank">CarbonRom</a></td>
+   <td>Yes</td>
+ </tr>
+</table>
 ---
 
 ### More information
