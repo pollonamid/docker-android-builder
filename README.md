@@ -1,7 +1,7 @@
 docker-android-builder
 ==================
 
-Create a [Docker] based environment for [Android Open Source Project] (AOSP) based building
+Create a [Docker](https://www.docker.io) based environment for [Android Open Source Project](https://source.android.com/index.html) (AOSP) based building
 
 This Dockerfile will create a docker container which is based on Trusted Docker Ubuntu 14.04 build.
 It will install the "repo" utility and any other build dependencies which are required to compile your flavor of Android.
@@ -12,7 +12,7 @@ It will install the "repo" utility and any other build dependencies which are re
 
 ### How to run/build 
 
-* You will need to [install Docker][Docker_Installation] to proceed!
+* You will need to [install Docker](https://www.docker.io/gettingstarted) to proceed!
 * If an image does not exist, ```docker build``` is executed first
 
 1. Clone the repo
@@ -30,7 +30,7 @@ cd docker-android-builder
 ```
 
 **ADDITIONAL NOTES:**  
-* The container uses a text-based window manager and terminal multiplexer called [Byobu] to run the shell.
+* The container uses a text-based window manager and terminal multiplexer called [Byobu](http://byobu.co/) to run the shell.
 
 * Once in the container, begin the build process your desired Android distribution.  ONLY If you have updated the build-android script, simply run:
 ```
@@ -39,22 +39,14 @@ build-android
 ---
 
 ### Tested Android builds  
-Distribution | Requires Oracle Java
-- |:-:|
-[CarbonRom] | Yes
+
+| Distribution | Requires Oracle Java |   
+| - | :-: |   
+| [CarbonRom](https://carbonrom.org ) | Yes |   
 
 ---
 
 ### More information
 
-* [Discussion thread @ XDA developers] - Started for [docker-cyanogenmod]
+* [Discussion thread @ XDA developers](http://forum.xda-developers.com/showthread.php?t=2650345) - Started for [docker-cyanogenmod](https://github.com/stucki/docker-cyanogenmod)
 
----
-
-[Docker]:                      https://www.docker.io/
-[Android Open Source Project]: https://source.android.com/index.html
-[Docker_Installation]:         https://www.docker.io/gettingstarted/
-[Byobu]:            		   http://byobu.co/
-[CarbonRom]: 				   https://carbonrom.org/
-[Discussion thread @ XDA developers]: http://forum.xda-developers.com/showthread.php?t=2650345  
-[docker-cyanogenmod]:		   https://github.com/stucki/docker-cyanogenmod
