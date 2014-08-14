@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN \
   apt-get -qq -y update && \
-  apt-get install -y file dpkg-dev ccache lzop mingw32 pngcrush nano && \
+  apt-get install -y file dpkg-dev ccache lzop mingw32 pngcrush nano zip && \
   apt-get install -y lib32z1-dev lib32ncurses5-dev lib32readline-gplv2-dev && \
   apt-get install -y libbz2-1.0 libbz2-dev lib32bz2-1.0 lib32bz2-dev && \
   apt-get install -y python2.7-minimal libc6-dev flex tofrodos && \

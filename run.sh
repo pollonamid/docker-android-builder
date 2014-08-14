@@ -9,7 +9,7 @@ HOST_CCACHE=$(pwd)/$BUILD_NAME"_ccache"
 HOST_CONFIG=$(pwd)/config
 
 DOCKER_SOURCE="/root/android"
-DOCKER_CCACHE="/svr/ccache"
+DOCKER_CCACHE="/srv/ccache"
 DOCKER_CONFIG="/root/config"
 
 CONTAINER_NAME=$BUILD_NAME_LC"_"$BRANCH

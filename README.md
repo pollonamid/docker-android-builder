@@ -51,6 +51,12 @@ build-android
 </table>
 ---
 
+### TODO
+* Test more builds.
+* Add local user permission mapping. [Dependent on Docker update](https://github.com/docker/docker/pull/5910)
+* Add basic documentation for different OS's and helpful tools like [Android-Kitchen](https://github.com/dsixda/Android-Kitchen)
+
+
 ### More information
 
 * [Discussion thread @ XDA developers](http://forum.xda-developers.com/showthread.php?t=2650345) - Started for [docker-cyanogenmod](https://github.com/stucki/docker-cyanogenmod)
