@@ -48,6 +48,10 @@ build-android
    <td><a href="https://carbonrom.org" target="_blank">CarbonRom</a></td>
    <td>Yes</td>
  </tr>
+  <tr>
+   <td><a href="http://omnirom.org/" target="_blank">OmniRom</a></td>
+   <td>No</td>
+ </tr>
 </table>
 ---
 
