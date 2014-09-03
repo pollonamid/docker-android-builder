@@ -51,11 +51,11 @@ build-android
 * Add basic documentation for different OS's and helpful tools like [Android-Kitchen](https://github.com/dsixda/Android-Kitchen)
 
 ### FAQ
-*Q:* Do I need Oracle Java?  
-*A:* In most cases, no.  However, there have been instances where functionality that only exist in Oracle Java has been committed to AOSP projects ([Example](https://github.com/CyanogenMod/android_external_bouncycastle/commit/57c3bb556ef873a72010d6022edddc14e6bba9be)).  
+**Q:** Do I need Oracle Java?  
+**A:** In most cases, no.  However, there have been instances where functionality that only exist in Oracle Java has been committed to AOSP projects ([Example](https://github.com/CyanogenMod/android_external_bouncycastle/commit/57c3bb556ef873a72010d6022edddc14e6bba9be)).  
 
-*Q:* Using <pre>adb devices</pre>, on the host system I can see my USB connected device.  Why is it not listed through Docker?
-*A:* The USB port needs to be exposed to Docker.  [See this Stack Overflow post](http://stackoverflow.com/questions/17792161/is-it-possible-to-expose-a-usb-device-to-a-lxc-docker-container)
+**Q:** Using *adb devices*, on the host system I can see my USB connected device.  Why is it not listed through Docker?  
+**A:** The USB port needs to be exposed to Docker.  [See this Stack Overflow post](http://stackoverflow.com/questions/17792161/is-it-possible-to-expose-a-usb-device-to-a-lxc-docker-container)
 
 ### More information
 
