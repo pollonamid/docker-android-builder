@@ -38,21 +38,11 @@ build-android
 ```
 ---
 
-### Tested Android builds  
-<table>
-  <tr>
-   <th>Distribution</th>
-   <th>Requires Oracle Java</th>
- </tr>
- <tr>
-   <td><a href="https://carbonrom.org" target="_blank">CarbonRom</a></td>
-   <td>Yes</td>
- </tr>
-  <tr>
-   <td><a href="http://omnirom.org/" target="_blank">OmniRom</a></td>
-   <td>No</td>
- </tr>
-</table>
+### Tested Android builds
+* [CarbonRom](https://carbonrom.org)
+* [OmniRom](http://omnirom.org)
+* [Dirty Unicorns](http://dirtyunicorns.com/dusite)
+
 ---
 
 ### TODO
@@ -60,6 +50,12 @@ build-android
 * Add local user permission mapping. [Dependent on Docker update](https://github.com/docker/docker/pull/5910)
 * Add basic documentation for different OS's and helpful tools like [Android-Kitchen](https://github.com/dsixda/Android-Kitchen)
 
+### FAQ
+*Q:* Do I need Oracle Java?  
+*A:* In most cases, no.  However, there have been instances where functionality that only exist in Oracle Java has been committed to AOSP projects ([Example](https://github.com/CyanogenMod/android_external_bouncycastle/commit/57c3bb556ef873a72010d6022edddc14e6bba9be)).  
+
+*Q:* Using <pre>adb devices</pre>, on the host system I can see my USB connected device.  Why is it not listed through Docker?
+*A:* The USB port needs to be exposed to Docker.  [See this Stack Overflow post](http://stackoverflow.com/questions/17792161/is-it-possible-to-expose-a-usb-device-to-a-lxc-docker-container)
 
 ### More information
 

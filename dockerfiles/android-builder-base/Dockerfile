@@ -14,7 +14,7 @@ RUN \
   apt-get install -y python2.7-minimal python-markdown libc6-dev flex tofrodos && \
   apt-get install -y libghc-bzlib-dev libgl1-mesa-dev libncurses5-dev && \
   apt-get install -y libreadline6-dev python-markdown schedtool && \
-  apt-get install -y squashfs-tools x11proto-core-dev xsltproc && \
+  apt-get install -y squashfs-tools x11proto-core-dev xsltproc liblz4-tool && \
   apt-get install -y libxml2-utils gperf bison g++-multilib zlib1g-dev && \
   apt-get install -y android-tools-adb android-tools-fastboot
 
