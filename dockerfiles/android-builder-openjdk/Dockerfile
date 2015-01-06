@@ -5,5 +5,5 @@ MAINTAINER Tom Hiller
 
 ENV DEBIAN_FRONTEND noninteractive
 
-## Install OpenJDK 6
-RUN apt-get install -y openjdk-6-jdk openjdk-6-jre
+## Install OpenJDK 7
+RUN apt-get install -y openjdk-7-jdk openjdk-7-jre
