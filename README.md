@@ -17,8 +17,8 @@ It will install the "repo" utility and any other build dependencies which are re
 
 1. Clone the repo
 ```
-git clone https://github.com/thrilleratplay/docker-android-builder.git
-cd docker-android-builder
+git clone https://github.com/pollonamid/docker-android5-builder.git
+cd docker-android5-builder
 ```
 
 2. Update the build variables located in "config/android-build-vars.sh"
